@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.content {
+    background: url('../images/blurred-city-picture.jpg') center/cover no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.app-container {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.weather-details {
+    width: 60%;
+    height: 20%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.detailed-details {
+    background: url('../images/city-picture.jpg') center/cover no-repeat;
+    width: 60%;
+    height: 60%;
+}
+
+.daily-weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+    width: 250px;
+    border-right: rgba(0, 0, 0, 0.2) 0.5px solid;
+}
+
+.day-details > p:first-child {
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+.day-details > p:last-child {
+    font-size: 1.2rem;
+}
+
+.day-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
