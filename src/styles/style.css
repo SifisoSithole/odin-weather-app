@@ -5,7 +5,7 @@
 }
 
 .content {
-    background: url('../images/blurred-city-picture.jpg') center/cover no-repeat;
+    background: url('../images/blurred-background.jpg') center/cover no-repeat;
     height: 100vh;
     width: 100vw;
 }
@@ -27,7 +27,7 @@
 }
 
 .detailed-details {
-    background: url('../images/city-picture.jpg') center/cover no-repeat;
+    background: url('../images/background.jpg') center/cover no-repeat;
     width: 60%;
     height: 60%;
 }
@@ -42,13 +42,20 @@
     border-right: rgba(0, 0, 0, 0.2) 0.5px solid;
 }
 
-.day-details > p:first-child {
+.daily-temp {
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
-.day-details > p:last-child {
+.date, .icon-title {
     font-size: 1.2rem;
+}
+
+.weather-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .day-details {
