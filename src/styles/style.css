@@ -21,15 +21,36 @@
 }
 
 .weather-details {
-    width: 60%;
+    display: flex;
+    width: 80%;
     height: 20%;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
+.hour-update {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: rgba(0, 0, 0, 0.2) 0.5px solid;
+    height: 100%;
+    width: 100%;
+}
+
+.hour-update-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 65%;
+}
+
 .detailed-details {
     background: url('../images/background.jpg') center/cover no-repeat;
-    width: 60%;
+    width: 80%;
     height: 60%;
+}
+
+.current-hour {
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .daily-weather {
@@ -37,8 +58,8 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    gap: 20px;
-    width: 250px;
+    gap: 10px;
+    width: 35%;
     border-right: rgba(0, 0, 0, 0.2) 0.5px solid;
 }
 

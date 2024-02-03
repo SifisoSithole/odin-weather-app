@@ -1,6 +1,7 @@
 import weatherAPI from './weather-api';
 import createDailyWeatherContainer from './components/daily-details';
 import DOMElements from './components/DOMElements';
+import createHourlyUpdateContainer from './components/hourly-update';
 
 import './styles/style.css';
 
@@ -31,19 +32,18 @@ function formatDate(inputDate) {
     const response = await fetch('https://api.ipify.org?format=json', {mode: 'cors'});
     const ip = await response.json();
     const forecastData = await weatherAPI.currentWeather(ip.ip);
-    const dailyDetails = document.querySelector('.daily-weather');
-
-    console.log(forecastData);
+    const dailyDetails = document.querySelector('.weather-details');
 
     dailyDetails.appendChild(createDailyWeatherContainer());
     const domElements = new DOMElements();
     const dailyWeather = forecastData.forecast.forecastday[0];
+    console.log(dailyWeather);
 
-    console.log(domElements.dailyTemp);
-
-    domElements.dailyTemp.innerHTML = `${dailyWeather.day.avgtemp_c}&deg;C`;
+    domElements.dailyTemp.innerHTML = `${dailyWeather.day.maxtemp_c}&deg;C`;
     domElements.date.textContent = formatDate(dailyWeather.date);
     domElements.weatherIcon.src = dailyWeather.day.condition.icon;
     domElements.weatherIconTitle.textContent = dailyWeather.day.condition.text;
+
+    dailyDetails.appendChild(createHourlyUpdateContainer(dailyWeather.hour));
     
 })();
