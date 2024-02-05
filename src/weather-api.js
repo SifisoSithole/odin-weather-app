@@ -42,10 +42,24 @@ const weatherAPI = (() => {
         throw error;
       }
     };
+
+    const search = async (q) => {
+      try {
+        // Construct the URL for the search weather API endpoint
+        const url = `${baseURL}search.json?key=${APIKEY}&q=${q}`;
+  
+        // Fetch and return the location data
+        return await fetchData(url);
+      } catch (error) {
+        console.error('Error searching for location:', error);
+        throw error;
+      }
+    }
   
     // Expose the currentWeather function as the public API for this module
     return {
-      currentWeather
+      currentWeather,
+      search
     };
   })();
   

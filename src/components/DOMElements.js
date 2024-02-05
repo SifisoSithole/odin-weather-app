@@ -31,6 +31,37 @@ class DOMElements {
          * @type {HTMLElement}
          */
         this.weatherIconTitle = document.querySelector('.icon-title');
+
+        /**
+         * Represents the DOM element for the left side of the weather display.
+         * @type {HTMLElement}
+         */
+        this.leftSide = document.querySelector('.left-side');
+
+        /**
+         * Represents the DOM element for the right side of the weather display.
+         * @type {HTMLElement}
+         */
+        this.rightSide = document.querySelector('.right-side');
+
+        /**
+         * Represents the DOM element for detailed daily weather updates.
+         * @type {HTMLElement}
+         */
+        this.detailedDailyUpdates = document.querySelector('.detailed-daily-update');
+
+        /**
+         * Represents the DOM element for the container of weather display options (e.g., Today, Week).
+         * @type {HTMLElement}
+         */
+        this.optionsContainer = document.querySelector('.options-container');
+
+        /**
+         * Represents the DOM element for displaying the current time.
+         * @type {HTMLElement}
+         */
+        this.currentTime = document.querySelector('.current-time-container');
+
     }
   }
   

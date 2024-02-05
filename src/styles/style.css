@@ -47,6 +47,9 @@
     background: url('../images/background.jpg') center/cover no-repeat;
     width: 80%;
     height: 60%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
 }
 
 .current-hour {
@@ -86,3 +89,63 @@
     justify-content: center;
 }
 
+.detailed-daily-update {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 40px;
+    padding: 20px;
+}
+
+.location {
+    font-weight: bold;
+    font-size: 2.2rem;
+    grid-column: span 2;
+}
+
+.right-side {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.options-container {
+    display: flex;
+    gap: 25px;
+    cursor: pointer;
+}
+
+.active {
+    border-top: 4px solid yellow;
+    padding-top: 5px;
+}
+
+.not-active {
+    padding-top: 9px;
+}
+
+.search-container {
+    padding: 20px;
+}
+
+.search-input {
+    border-radius: 30px;
+    height: 27px;
+    width: 300px;
+    text-align: center;
+}
+
+.suggestion-item {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #FFF;
+    color: #000;
+}
+
+.suggestions-container {
+    text-align: center;
+}
